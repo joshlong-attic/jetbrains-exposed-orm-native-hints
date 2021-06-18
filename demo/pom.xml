@@ -9,10 +9,10 @@
         <version>2.5.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>exposed-hints</artifactId>
+    <groupId>com.joshlong.exposedorm.native</groupId>
+    <artifactId>demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>exposed-hints</name>
+    <name>demo</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>11</java.version>
@@ -96,9 +96,13 @@
                 <groupId>org.springframework.experimental</groupId>
                 <artifactId>spring-aot-maven-plugin</artifactId>
                 <version>${spring-native.version}</version>
-              <!--  <configuration>
-                    <mode>native-agent</mode>
-                </configuration>-->
+                <dependencies>
+                    <dependency>
+                        <groupId>com.joshlong.exposedorm.native</groupId>
+                        <artifactId>hints</artifactId>
+                        <version>0.0.1-SNAPSHOT</version>
+                    </dependency>
+                </dependencies>
                 <executions>
                     <execution>
                         <id>test-generate</id>
