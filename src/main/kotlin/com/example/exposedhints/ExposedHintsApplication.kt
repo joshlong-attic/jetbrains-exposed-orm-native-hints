@@ -12,9 +12,11 @@ import org.springframework.stereotype.Component
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
+
 @TypeHint(
     access = AccessBits.ALL,
     types = [
+        java.util.Collections::class,
         Column::class,
         Database::class,
         DdlAware::class,
@@ -28,12 +30,40 @@ import org.springframework.transaction.annotation.Transactional
         TransactionManager::class,
         Column::class,
         Database::class,
+
+        ///
+        kotlin.jvm.functions.Function0::class,
+        kotlin.jvm.functions.Function1::class,
+        kotlin.jvm.functions.Function2::class,
+        kotlin.jvm.functions.Function3::class,
+        kotlin.jvm.functions.Function4::class,
+        kotlin.jvm.functions.Function5::class,
+        kotlin.jvm.functions.Function6::class,
+        kotlin.jvm.functions.Function7::class,
+        kotlin.jvm.functions.Function8::class,
+        kotlin.jvm.functions.Function9::class,
+        kotlin.jvm.functions.Function10::class,
+        kotlin.jvm.functions.Function11::class,
+        kotlin.jvm.functions.Function12::class,
+        kotlin.jvm.functions.Function13::class,
+        kotlin.jvm.functions.Function14::class,
+        kotlin.jvm.functions.Function15::class,
+        kotlin.jvm.functions.Function16::class,
+        kotlin.jvm.functions.Function17::class,
+        kotlin.jvm.functions.Function18::class,
+        kotlin.jvm.functions.Function19::class,
+        kotlin.jvm.functions.Function20::class,
+        kotlin.jvm.functions.Function21::class,
+        kotlin.jvm.functions.Function22::class,
+        kotlin.jvm.functions.FunctionN::class
+
     ]
 )
 @SpringBootApplication
 class ExposedHintsApplication
 
 fun main(args: Array<String>) {
+
     runApplication<ExposedHintsApplication>(*args)
 }
 
